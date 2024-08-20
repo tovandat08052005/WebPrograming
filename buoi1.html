@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercises</title>
+</head>
+<body>
+
+    <h1>DOM Exercises</h1>
+
+    <h3 id="title">Original Title</h3> 
+
+    <p id="text">This is some text.</p> 
+
+    <ul id="list"> 
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <div id="remove-me">This element will be removed.</div> 
+
+    <img id="image" src="old-image.jpg" alt="Old Image" width="100"> 
+
+    <button id="btn">Click Me</button> 
+
+    <p>Paragraph 1</p> 
+    <p>Paragraph 2</p>
+
+    <div id="table-container"></div> 
+
+    <div>Div 1</div> 
+    <div>Div 2</div>
+    <div>Div 3</div>
+
+    <div class="item">Item 1</div> 
+    <div class="item">Item 2</div>
+
+    <script>
+        // Bài tập 1
+        document.getElementById('title').textContent = 'Hello, DOM!';
+
+        // Bài tập 2
+        document.getElementById('text').style.color = 'red';
+        
+        // Bài tập 3
+        let newItem = document.createElement('li');
+        newItem.textContent = 'Item 3';
+        document.getElementById('list').appendChild(newItem);
+
+        // Bài tập 4
+        document.getElementById('remove-me').remove();
+
+        // Bài tập 5
+        document.getElementById('image').src = 'new-image.jpg';
+
+        // Bài tập 6
+        document.getElementById('btn').addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+
+        // Bài tập 7
+        let paragraphs = document.getElementsByTagName('p');
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].textContent = 'Updated paragraph';
+        }
+
+        // Bài tập 8
+        let table = document.createElement('table');
+        for (let i = 0; i < 3; i++) {
+            let row = document.createElement('tr');
+            for (let j = 0; j < 3; j++) {
+                let cell = document.createElement('td');
+                cell.textContent = `Row ${i+1}, Cell ${j+1}`;
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+        document.getElementById('table-container').appendChild(table);
+
+        // Bài tập 9
+        let divs = document.getElementsByTagName('div');
+        alert('Number of div elements: ' + divs.length);
+
+        // Bài tập 10
+        let items = document.getElementsByClassName('item');
+        for (let i = 0; i < items.length; i++) {
+            items[i].textContent = 'Updated item';
+        }
+    </script>
+
+</body>
+</html>

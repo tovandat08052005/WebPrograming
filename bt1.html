@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="bt1.css">
+</head>
+<body>
+    <h1>Quản Lý Sinh Viên</h1>
+    <form id="studentForm">
+        <input type="hidden" id="studentId">
+        <label for="studentName">Họ và Tên:</label>
+        <input type="text" id="studentName" required><br>
+
+        <label for="studentGender">Giới Tính:</label>
+        <select id="studentGender" required>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select><br>
+
+        <label for="studentDOB">Ngày Sinh:</label>
+        <input type="date" id="studentDOB" required><br>
+
+        <label for="studentHometown">Quê Quán:</label>
+        <input type="text" id="studentHometown" required><br>
+
+        <button type="submit">Thêm/Cập nhật Sinh Viên</button>
+    </form>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ và Tên</th>
+                <th>Giới Tính</th>
+                <th>Ngày Sinh</th>
+                <th>Quê Quán</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="bt1t.js"></script>
+</body>
+</html>
